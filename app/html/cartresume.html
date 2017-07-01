@@ -1,0 +1,27 @@
+<div id="cart-resume" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Here Is Your Cart</h4>
+            </div>
+            <div class="modal-body">
+                <h1>CART-RESUME</h1>
+                <div ng-show="cart.length === 0">
+                  <h4>No products added. Common lets waste some money! add one !</h4>
+                </div>
+                <ul class="list-group">
+                  <li class="list-group-item" ng-repeat="c in cart">
+                    <h4>{{c.name}} |                <span style="color:blue"> {{c.count}} </span>
+                        | {{c.price*c.count | currency}}</h4>
+                    <input class="btn btn-danger" type="button" ng-click="removeItemCart(c)" value="Remove" />
+                  </li>
+                </ul>
+                Total : {{total | currency}}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+</div>

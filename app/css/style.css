@@ -1,0 +1,34 @@
+#container{
+    margin-top: 50px;
+}
+
+.list-group-item{
+    margin-left: 1em;
+}
+.panel{
+    z-index: 1000000000000;
+    position: fixed;
+    right: 2%;
+    top: 5em;
+    float: right;
+    background: #8af75e;
+    padding-right: 5px;
+    box-shadow: 4px 7px 9px rgba(0,0,0,.05);
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
